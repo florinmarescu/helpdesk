@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>HelpDesk|Login</title>
+</head>
+<body>
+    <div class="login-window">
+        <div class="logo-section">
+            <div class="logo">HelpDesk Assist</div>
+        </div>
+        <div class="login-header">
+            <p>Please sign in to access the helpdesk system</p>
+        </div>
+
+        <form id="loginForm" action="http://localhost/licenta/login.php" method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <div class="input-container">
+                    <input type="text" id="username" name="username" required autocomplete="username">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-container">
+                    <input type="password" id="password" name="password" required autocomplete="current-password">
+                </div>
+            </div>
+            <button type="submit" class="login-btn" id="loginButton">
+                Sign In
+            </button>
+        </form>
+
+        <div class="form-footer">
+            <p>Agent authentication</p>
+        </div>
+    </div>
+<script src="scripts/login.js"></script>
+</body>
+</html>
