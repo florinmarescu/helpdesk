@@ -2,7 +2,6 @@
 session_start();
 header('Content-Type: application/json');
 
-// Check if user is logged in
 if (!isset($_SESSION['agent_id'])) {
     echo json_encode(['success' => false, 'error' => 'Not logged in']);
     exit;
@@ -21,10 +20,8 @@ try {
     exit;
 }
 
-// Get POST data
 $input = json_decode(file_get_contents('php://input'), true);
 
-// Validate required fields
 if (empty($input['ticket_id'])) {
     echo json_encode(['success' => false, 'error' => 'Ticket ID is required']);
     exit;
